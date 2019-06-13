@@ -8,4 +8,13 @@ pipeline {
             }
         }
     }
+    stage ('Preperation'){
+        echo 'Preperation'
+    }
+    stage ('Build'){
+        echo 'Build'
+    }
+    stage ('Result'){
+        echo 'Result'
+}
 }
