@@ -7,14 +7,15 @@ pipeline {
                 echo 'Holla Mundos!'
             }
         }
+        stage ('Preperation'){
+            echo 'Preperation'
+        }
+        stage ('Build'){
+            echo 'Build'
+        }
+        stage ('Result'){
+            echo 'Result'
+        }
     }
-    stage ('Preperation'){
-        echo 'Preperation'
-    }
-    stage ('Build'){
-        echo 'Build'
-    }
-    stage ('Result'){
-        echo 'Result'
-}
+    
 }
