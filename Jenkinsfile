@@ -23,6 +23,7 @@ pipeline {
                 echo 'Result'
                 junit '**/build/test-results/test/TEST-*.xml'
                 archive 'build/libs'
+                
             }
         }
     }
