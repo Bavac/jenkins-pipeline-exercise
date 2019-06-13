@@ -10,20 +10,19 @@ pipeline {
         stage ('Preperation'){
             steps{
                 echo 'Preperation'
-                ./gradlew clean test jar
+                sh './gradlew clean test jar'
             }
         }
         stage ('Build'){
             steps{
                 echo 'Build'
-                
             }
         }
         stage ('Result'){
             steps{
-            echo 'Result'
-            junit '**/build/test-results/test/TEST-*.xml'
-            archiveArtifacts 'build/libs/*'
+                echo 'Result'
+                junit '**/build/test-results/test/TEST-*.xml'
+                archive 'build/libs'
             }
         }
     }
